@@ -1,5 +1,6 @@
 import http from "node:http";
 import express from 'express';
+import morgan from 'morgan';
 
 const app = express();
 
@@ -7,6 +8,8 @@ const server = http.createServer(app);
 
 const host = "0.0.0.0";
 const port = 8000;
+
+app.use(morgan('tiny'))
 
 app.get("/", (req, res) => {
     res.send('Hello! Test');
