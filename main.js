@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const host = "0.0.0.0";
 const port = 8000;
 
-app.use(morgan('tiny'))
+app.use(morgan('common'))
 
 app.get("/", (req, res) => {
     res.send('Hello! Test');
